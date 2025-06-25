@@ -39,6 +39,4 @@ Psudo game logic.
 ~~Tried to use as much rust features as possible lol~~
 
 Stuff to improve and learn:
-- Start using the `Result` enum instead of booleans for better error control and to remove these ugly `"ifs"` in the game_loop function.
-Stuff to improve the logic:
-- Remove code duplication inside of the `game_loop` function. I wanted readabilty but the current soultion is not as great as I thought.
+- Start using the `Result` enum instead of booleans for better error control and to remove these `"ugly ifs"` in the game_loop function.

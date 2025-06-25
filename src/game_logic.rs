@@ -41,19 +41,16 @@ impl Game {
                 break;
             }
 
-            while !self.current_player.place(&mut self.board) {}
+            // Handle turn for both players
+            for player in [&self.current_player, &self.other_player] {
+                while !player.place(&mut self.board) {}
+                self.board.display();
+                self.board.check_win(player, &mut self.winner);
 
-            self.board.display();
-            self.board.check_win(&self.current_player, &mut self.winner);
-
-            if self.winner.is_some() {
-                break;
+                if self.winner.is_some() {
+                    break;
+                }
             }
-
-            while !self.other_player.place(&mut self.board) {}
-
-            self.board.display();
-            self.board.check_win(&self.other_player, &mut self.winner);
 
             if self.winner.is_some() {
                 break;
