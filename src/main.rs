@@ -13,8 +13,6 @@ fn main() {
 
     game.game_loop();
 
-    println!("{game:#?}");
-
     /*
     LOGIC
         Create Game obj.
