@@ -36,8 +36,8 @@ impl Game {
         self.board.display();
 
         loop {
-            if self.moves_made >= 9 && self.winner.is_none() {
-                self.current_player.display_tie();
+            if self.moves_made == 9 && self.winner.is_none() {
+                Player::display_tie();
                 break;
             }
 

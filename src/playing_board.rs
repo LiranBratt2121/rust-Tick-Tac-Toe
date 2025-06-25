@@ -59,7 +59,7 @@ impl Board {
     pub fn check_win(&self, player: &Player, winner_ref: &mut Option<Player>) -> () {
         self.has_a_winner(player)
             .map(|winner| {
-                player.display_winner(&winner);
+                Player::display_winner(&winner);
                 *winner_ref = Some(winner.clone());
             });
     }

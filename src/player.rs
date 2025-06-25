@@ -22,11 +22,11 @@ impl Player {
         }
     }
 
-    pub fn display_winner(&self, winner: &Player) -> () {
+    pub fn display_winner(winner: &Player) -> () {
         println!("{} WINS!", winner.name());
     }
 
-    pub fn display_tie(&self) -> () {
+    pub fn display_tie() -> () {
         println!("OH NO! It's A TIE!");
     }
 
